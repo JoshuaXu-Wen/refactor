@@ -132,8 +132,8 @@ resource appServiceApp 'Microsoft.Web/sites@2021-03-01' = {
           value: applicationInsights.properties.InstrumentationKey
         }
         {
-          name: 'StorageAccountConnectionString'
-          value: 'StorageAccountConnectionString'
+          name: storageAccountConnectionString
+          value: storageAccountConnectionString
         }
       ]
     }
@@ -181,7 +181,6 @@ resource roleAssignment 'Microsoft.Authorization/roleAssignments@2020-10-01-prev
   }
 }
 
-
 resource applicationInsights 'Microsoft.Insights/components@2020-02-02' = {
   name: applicationInsightsName
   location: location
@@ -190,5 +189,3 @@ resource applicationInsights 'Microsoft.Insights/components@2020-02-02' = {
     Application_Type: 'web'
   }
 }
-
-
