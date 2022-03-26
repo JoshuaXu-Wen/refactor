@@ -132,7 +132,7 @@ resource appServiceApp 'Microsoft.Web/sites@2021-03-01' = {
           value: applicationInsights.properties.InstrumentationKey
         }
         {
-          name: storageAccountConnectionString
+          name: 'StorageAccountConnectionString'
           value: storageAccountConnectionString
         }
       ]
